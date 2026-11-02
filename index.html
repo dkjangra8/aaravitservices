@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarav IT Services | Your Complete IT Infrastructure & Technology Solutions Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: grid;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-blue-950 text-white text-xs sm:text-sm py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center">
+                <span><i class="fas fa-map-marker-alt text-blue-400 mr-1.5"></i> 112A/5, Vishal Bhawan, Nehru Place, New Delhi</span>
+                <span><i class="fas fa-globe text-blue-400 mr-1.5"></i> www.aaravitservices.in</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:7678468337" class="hover:text-blue-300 font-semibold"><i class="fas fa-phone-alt text-blue-400 mr-1.5"></i> 7678468337</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 text-white p-2.5 rounded-xl shadow-md">
+                    <i class="fas fa-server text-xl"></i>
+                </div>
+                <div>
+                    <a href="index.html" class="text-xl font-extrabold tracking-tight text-blue-900">AARAV IT SERVICES</a>
+                    <p class="text-xs text-slate-500 font-medium">Nehru Place, New Delhi</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-6 font-medium text-slate-700">
+                <a href="index.html#home" class="text-blue-600 font-semibold transition">Home</a>
+                <a href="index.html#about" class="hover:text-blue-600 transition">About Us</a>
+                
+                <!-- Services Dropdown Menu -->
+                <div class="relative dropdown py-6">
+                    <a href="#services" class="hover:text-blue-600 transition flex items-center gap-1">
+                        Services <i class="fas fa-chevron-down text-xs"></i>
+                    </a>
+                    <div class="dropdown-menu absolute hidden top-full -left-10 w-[280px] bg-white border border-slate-200 shadow-2xl rounded-2xl p-3 z-50 grid-cols-1 gap-2">
+                        <a href="cloud.html" class="px-3 py-2 text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center gap-2"><i class="fas fa-cloud text-blue-500 text-[10px]"></i> Cloud Services</a>
+                        <a href="amc.html" class="px-3 py-2 text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center gap-2"><i class="fas fa-desktop text-blue-500 text-[10px]"></i> AMC Services</a>
+                        <a href="index.html#services" class="px-3 py-2 text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center gap-2"><i class="fas fa-tools text-blue-500 text-[10px]"></i> Hardware Services</a>
+                        <a href="index.html#services" class="px-3 py-2 text-xs font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition flex items-center gap-2"><i class="fab fa-whatsapp text-emerald-500 text-[10px]"></i> Whatsapp Verified</a>
+                    </div>
+                </div>
+
+                <a href="#software" class="hover:text-blue-600 transition">Software Sales</a>
+                <a href="#hardware" class="hover:text-blue-600 transition">Hardware & Parts</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+
+            <!-- Right Buttons & Mobile Menu Toggle Button -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/917678468337?text=Hello%20Aarav%20IT%20Services,%20I%20want%20to%20inquire%20about%20your%20IT%20services." target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-semibold shadow-md transition text-sm">
+                    <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+                </a>
+                <a href="tel:7678468337" class="hidden sm:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4.5 py-2.5 rounded-xl font-semibold shadow-lg shadow-blue-500/20 transition text-sm">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 font-medium text-slate-700 shadow-xl">
+            <a href="index.html#home" class="block hover:text-blue-600 py-1">Home</a>
+            <a href="index.html#about" class="block hover:text-blue-600 py-1">About Us</a>
+            <div class="border-t border-slate-100 pt-2 pb-1">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Services</p>
+                <a href="cloud.html" class="block py-1.5 pl-3 text-sm text-slate-600 hover:text-blue-600"><i class="fas fa-cloud text-blue-500 mr-2"></i> Cloud Services</a>
+                <a href="amc.html" class="block py-1.5 pl-3 text-sm text-slate-600 hover:text-blue-600"><i class="fas fa-desktop text-blue-500 mr-2"></i> AMC Services</a>
+                <a href="index.html#services" class="block py-1.5 pl-3 text-sm text-slate-600 hover:text-blue-600"><i class="fas fa-tools text-blue-500 mr-2"></i> Hardware Services</a>
+            </div>
+            <a href="index.html#software" class="block hover:text-blue-600 py-1 border-t border-slate-100 pt-2">Software Sales</a>
+            <a href="index.html#hardware" class="block hover:text-blue-600 py-1">Hardware & Parts</a>
+            <a href="index.html#contact" class="block hover:text-blue-600 py-1">Contact</a>
+            <div class="pt-3 flex gap-2 border-t border-slate-100">
+                <a href="https://wa.me/917678468337" target="_blank" class="flex-1 text-center bg-emerald-600 text-white py-2 rounded-xl text-sm font-semibold"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:7678468337" class="flex-1 text-center bg-blue-600 text-white py-2 rounded-xl text-sm font-semibold"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Custom Coded Hero Banner Section (Text & Grid Layout matching your image) -->
+    <section id="home" class="relative overflow-hidden pt-12 pb-16 bg-gradient-to-b from-blue-900 via-blue-900 to-blue-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Top Heading Box -->
+            <div class="text-center max-w-4xl mx-auto mb-10">
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-6">
+                    Your Complete <span class="text-blue-400">IT Infrastructure</span> & Technology Solutions Partner
+                </h1>
+                
+                <div class="inline-block bg-blue-800/80 border border-blue-600 px-6 py-2 rounded-full text-xs sm:text-sm font-semibold text-blue-200 mb-6 shadow-md">
+                    Servers | Computers | Hardware | Software | Networking | Security | AMC
+                </div>
+
+                <p class="text-slate-200 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mb-8">
+                    We provide end-to-end IT solutions, including hardware and software sales, server installation, networking, security, technical support, maintenance, and Annual Maintenance Contracts (AMC).
+                </p>
+
+                <div class="inline-flex items-center gap-3 bg-blue-950/90 border border-blue-700 px-8 py-3 rounded-2xl shadow-xl text-sm sm:text-base font-bold tracking-wide">
+                    <span class="text-blue-300">Sales</span> • <span class="text-blue-300">Services</span> • <span class="text-blue-300">Support</span> • <span class="text-blue-300">Solutions</span>
+                </div>
+            </div>
+
+            <!-- 6 Feature Cards Grid (Matching your image grid) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                
+                <!-- 1. Server Solutions -->
+                <div class="bg-white text-slate-900 rounded-3xl p-6 shadow-xl border-t-4 border-blue-600 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fas fa-server"></i></div>
+                        <h3 class="font-extrabold text-lg mb-2 text-blue-900">Server Solutions</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">Server Sales, Installation, Configuration & Maintenance.</p>
+                    </div>
+                </div>
+
+                <!-- 2. IT Hardware Solutions -->
+                <div class="bg-white text-slate-900 rounded-3xl p-6 shadow-xl border-t-4 border-blue-600 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fas fa-laptop"></i></div>
+                        <h3 class="font-extrabold text-lg mb-2 text-blue-900">IT Hardware Solutions</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">Desktop, Laptop, Workstation & Accessories.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Software Solutions -->
+                <div class="bg-white text-slate-900 rounded-3xl p-6 shadow-xl border-t-4 border-blue-600 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fas fa-file-invoice"></i></div>
+                        <h3 class="font-extrabold text-lg mb-2 text-blue-900">Software Solutions</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">Software Sales, Installation & Licensing (Tally, Busy, etc.).</p>
+                    </div>
+                </div>
+
+                <!-- 4. Networking Solutions -->
+                <div class="bg-white text-slate-900 rounded-3xl p-6 shadow-xl border-t-4 border-blue-600 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="font-extrabold text-lg mb-2 text-blue-900">Networking Solutions</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">LAN, WAN, Wi-Fi & Network Security setups.</p>
+                    </div>
+                </div>
+
+                <!-- 5. IT Security Solutions -->
+                <div class="bg-white text-slate-900 rounded-3xl p-6 shadow-xl border-t-4 border-red-500 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="font-extrabold text-lg mb-2 text-slate-900">IT Security Solutions</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">Firewall, Data Backup & Protection.</p>
+                    </div>
+                </div>
+
+                <!-- 6. AMC Services -->
+                <div class="bg-white text-slate-900 rounded-3xl p-6 shadow-xl border-t-4 border-emerald-500 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold"><i class="fas fa-tools"></i></div>
+                        <h3 class="font-extrabold text-lg mb-2 text-blue-900">AMC Services</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">Annual Maintenance & Technical Support.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Taglines Bar -->
+            <div class="bg-blue-950/80 border border-blue-800 rounded-2xl p-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 text-center text-xs font-semibold text-slate-200">
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-handshake text-blue-400"></i> Your Technology, Our Responsibility.</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-trophy text-amber-400"></i> One Partner. Complete IT Solutions.</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-rocket text-blue-400"></i> Empowering Businesses Through Technology.</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-shield-alt text-emerald-400"></i> Reliable IT Solutions. Smarter Business.</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-cogs text-blue-400"></i> From Hardware to IT Infrastructure.</div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition text-center text-sm">
+                    Get Best Price Quote
+                </a>
+                <a href="https://wa.me/917678468337?text=Hello%20Aarav%20IT%20Services,%20I%20want%20to%20inquire%20about%20your%20IT%20services." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition text-center text-sm inline-flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> Chat on WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-slate-900">Welcome to Aarav IT Services</h2>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Located at the heart of Delhi's tech hub in <strong>Nehru Place</strong> (112A/5, Vishal Bhawan), <strong>Aarav IT Services</strong> is a premier destination for all kinds of computer hardware components, accessories, networking products, and corporate software licensing.
+                    </p>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        From hardware to IT infrastructure – We handle it all. Our customized solutions ensure your business runs smoothly with zero downtime.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-blue-900 text-lg mb-1">100% Genuine</h3>
+                            <p class="text-xs text-slate-600">Authorized software & branded hardware parts.</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-blue-900 text-lg mb-1">Expert Support</h3>
+                            <p class="text-xs text-slate-600">Quick on-site & remote technical assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-8 rounded-3xl text-white shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-6"><i class="fas fa-building mr-2 text-blue-300"></i> Quick Business Info</h3>
+                    <ul class="space-y-4 text-sm sm:text-base">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-blue-300 mt-1"></i>
+                            <span><strong>Address:</strong> 112A/5, Vishal Bhawan, Nehru Place, New Delhi - 110019</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-blue-300"></i>
+                            <span><strong>Phone:</strong> +91 7678468337</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-globe text-blue-300"></i>
+                            <span><strong>Website:</strong> www.aaravitservices.in</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-tools text-blue-300"></i>
+                            <span><strong>Core Tagline:</strong> One Partner. Complete IT Solutions.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authorized Software Sales -->
+    <section id="software" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-slate-900">Authorized Software Sales & Licensing</h2>
+                <p class="text-slate-600">Get 100% genuine software licenses, hassle-free renewals, and expert technical support for all your business needs.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-blue-500 transition shadow-sm p-6">
+                    <div>
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-md"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h4 class="font-bold text-xl mb-1 text-slate-900">Tally Prime</h4>
+                        <p class="text-xs font-semibold text-blue-600 mb-3">Accounting & GST Software</p>
+                        <p class="text-slate-600 text-sm mb-4">Authorized sales of new Tally Prime licenses, migration support, and annual TSS renewals.</p>
+                    </div>
+                    <a href="tel:7678468337" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl transition text-sm">Get Quote</a>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-blue-500 transition shadow-sm p-6">
+                    <div>
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-md"><i class="fas fa-calculator"></i></div>
+                        <h4 class="font-bold text-xl mb-1 text-slate-900">Busy Accounting</h4>
+                        <p class="text-xs font-semibold text-blue-600 mb-3">ERP & Financial Management</p>
+                        <p class="text-slate-600 text-sm mb-4">Complete business accounting software solutions, license upgrades, and customer training.</p>
+                    </div>
+                    <a href="tel:7678468337" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl transition text-sm">Get Quote</a>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-blue-500 transition shadow-sm p-6">
+                    <div>
+                        <div class="w-16 h-16 bg-red-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-md"><i class="fas fa-shield-virus"></i></div>
+                        <h4 class="font-bold text-xl mb-1 text-slate-900">Quick Heal</h4>
+                        <p class="text-xs font-semibold text-blue-600 mb-3">Antivirus & Endpoint Security</p>
+                        <p class="text-slate-600 text-sm mb-4">Total security solutions for PCs, corporate endpoints, and server protection against cyber threats.</p>
+                    </div>
+                    <a href="tel:7678468337" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl transition text-sm">Get Quote</a>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 flex flex-col justify-between hover:border-blue-500 transition shadow-sm p-6">
+                    <div>
+                        <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-md"><i class="fas fa-cloud"></i></div>
+                        <h4 class="font-bold text-xl mb-1 text-slate-900">TSPlus</h4>
+                        <p class="text-xs font-semibold text-blue-600 mb-3">Remote Access & Virtualization</p>
+                        <p class="text-slate-600 text-sm mb-4">Cost-effective remote desktop access, application publishing, and secure web access solutions.</p>
+                    </div>
+                    <a href="tel:7678468337" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl transition text-sm">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware & Accessories Section -->
+    <section id="hardware" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-slate-900">Computer Hardware & Parts</h2>
+                <p class="text-slate-600">High-performance computer components, spare parts, and accessories available at wholesale prices.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg mb-3 text-blue-600 flex items-center gap-2"><i class="fas fa-microchip"></i> Core Components</h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Processors (Intel & AMD)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Motherboards & RAM Modules</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> SSD & Hard Disk Drives (HDD)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Graphic Cards & SMPS Power Supplies</li>
+                    </ul>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg mb-3 text-blue-600 flex items-center gap-2"><i class="fas fa-plug"></i> Parts & Peripherals</h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Cabinet Casings & Coolers</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Keyboards, Mice & Combos</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Monitors & Display Screens</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> UPS Power Backup Units</li>
+                    </ul>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg mb-3 text-blue-600 flex items-center gap-2"><i class="fas fa-network-wired"></i> Accessories & Networking</h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Wi-Fi Routers & Network Switches</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Cat6 Cables & Patch Cords</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> HDMI, VGA & Power Cables</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> USB Hubs & Connectors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-slate-900">Get In Touch With Us</h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">Looking for computer hardware parts, software licenses, or custom server AMC plans? Visit our office in Nehru Place or drop us a message today.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shrink-0 font-bold"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Office Address</h4>
+                                <p class="text-slate-600 text-sm">112A/5, Vishal Bhawan, Nehru Place, New Delhi - 110019</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shrink-0 font-bold"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Phone Number</h4>
+                                <p class="text-slate-600 text-sm">7678468337</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shrink-0 font-bold"><i class="fas fa-globe"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Official Website</h4>
+                                <p class="text-slate-600 text-sm">www.aaravitservices.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-900">Send Direct Inquiry</h3>
+                    
+                    <form name="contact" method="POST" netlify netlify-honeypot="bot-field" class="space-y-4">
+                        <p class="hidden" style="display:none;">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-slate-700">Your Name</label>
+                            <input type="text" name="name" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-blue-500 outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-slate-700">Phone Number</label>
+                            <input type="tel" name="phone" required placeholder="Enter 10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-blue-500 outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-slate-700">Your Requirement (Hardware / Software / AMC)</label>
+                            <textarea name="message" rows="4" required placeholder="Tell us what you need..." class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-blue-500 outline-none text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition text-sm">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="font-bold text-white text-xl mb-2">AARAV IT SERVICES</p>
+            <p class="text-sm mb-4">112A/5, Vishal Bhawan, Nehru Place, New Delhi | Contact: 7678468337</p>
+            <p class="text-xs text-slate-500">&copy; 2026 Aarav IT Services. All Rights Reserved. Designed for www.aaravitservices.in</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
